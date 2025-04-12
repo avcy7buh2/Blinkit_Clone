@@ -3,9 +3,11 @@ import "../../Styling/card.css"
 import { GoPlus } from "react-icons/go";
 import { HiMiniMinusSmall } from "react-icons/hi2";
 import BillingContext from "../../context/cartContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({info}) => {
     const [count, setCount] = useState(0);
+    const navigate = useNavigate();
     const {price, item, setPrice, setItem, product, setProduct} = useContext(BillingContext);
 
     const handleAdd = () => {
@@ -31,6 +33,10 @@ const ProductCard = ({info}) => {
         setProduct([...product, {...info, count: 1}])
     }
 
+    const handleNavigation = () => {
+        navigate(`/productInfo?id=${info.id}`)
+    }
+
     return (
         <>
             {
@@ -40,7 +46,7 @@ const ProductCard = ({info}) => {
                             <img className="cardImage" src={info.image}></img>
                             <div className="titleContainer">
                                 <span className="timer block">30 MIns</span>
-                                <span className="title block">{info.title}</span>
+                                <span className="title block" onClick={handleNavigation}>{info.title}</span>
                                 <span className="block">500 ml</span>
                             </div>
                             <div className="pricingContainer">

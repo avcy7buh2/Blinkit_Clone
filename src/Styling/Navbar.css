@@ -43,6 +43,10 @@ input{
     font-size: small;
 }
 
+.cart-button:hover{
+    cursor: pointer;
+}
+
 .sideContainer{
     width: 20%;
     display: flex;

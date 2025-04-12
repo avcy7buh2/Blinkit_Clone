@@ -14,7 +14,6 @@ const ProductLayout = () => {
 
             if (prodData) {
                 setProduct(...product, prodData.data);
-                console.log(prodData.data)
             }
         }
 
