@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    border: 0 0 1px 0;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.logo-yellow {
+    color: yellow;
+}
+
+.logo-green {
+    color: yellowgreen;
+}
+
+.flex-full {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: content-box;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 240px;
+    flex: 1;
+}
+
+input{
+    flex: 1;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+}
+
+.cart-button {
+    background-color: darkseagreen;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: small;
+}
+
+.sideContainer{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 5px;
+}
